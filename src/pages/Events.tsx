@@ -1,12 +1,20 @@
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
+import type { EventContentArg } from "@fullcalendar/core";
 import { useEffect, useState } from "react";
 
+type CalendarEvent = {
+  id: string;
+  title: string;
+  start: string;
+  description: string;
+};
+
 export default function Events() {
-  const [events, setEvents] = useState([]);
+  const [events, setEvents] = useState<CalendarEvent[]>([]);
 
   useEffect(() => {
-    const manualEvents = [
+    const manualEvents: CalendarEvent[] = [
       {
         id: "1",
         title: "🚀 Hyperloop Workshop",
@@ -57,8 +65,7 @@ export default function Events() {
   );
 }
 
-// Custom event renderer with emoji and subtext
-function renderEventContent(eventInfo: any) {
+function renderEventContent(eventInfo: EventContentArg) {
   return (
     <div className="text-sm leading-snug">
       <div className="font-semibold">{eventInfo.event.title}</div>
