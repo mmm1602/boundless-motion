@@ -6,6 +6,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Events from './pages/Events';
 import Contact from './pages/Contact';
+import DronePage from "./pages/DronePage";
+import HoverboardPage from "./pages/HoverboardPage";
+import HyperloopPage from "./pages/HyperloopPage";
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -17,6 +20,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="about" element={<About />} />
           <Route path="events" element={<Events />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="drone" element={<DronePage />} />
+          <Route path="hoverboard" element={<HoverboardPage />} />
+          <Route path="hyperloop" element={<HyperloopPage />} />
         </Route>
       </Routes>
     </BrowserRouter>
