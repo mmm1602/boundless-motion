@@ -9,20 +9,22 @@ import Contact from './pages/Contact';
 import DronePage from "./pages/DronePage";
 import HoverboardPage from "./pages/HoverboardPage";
 import HyperloopPage from "./pages/HyperloopPage";
+import ScrollToTop from "./components/Scroll";
 import './index.css';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
           <Route path="events" element={<Events />} />
           <Route path="contact" element={<Contact />} />
-          <Route path="drone" element={<DronePage />} />
-          <Route path="hoverboard" element={<HoverboardPage />} />
-          <Route path="hyperloop" element={<HyperloopPage />} />
+          <Route path="/projects/drone" element={<DronePage />} />
+          <Route path="/projects/hoverboard" element={<HoverboardPage />} />
+          <Route path="/projects/hyperloop" element={<HyperloopPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

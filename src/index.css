@@ -10,3 +10,12 @@ html, body {
   scroll-behavior: smooth;
   @apply bg-gray-950 text-gray-100 font-sans antialiased;
 }
+
+/* In your CSS or global styles */
+.grainy-text {
+  background: url('/grain-texture.png'); /* semi-transparent noise texture */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: cover;
+  mix-blend-mode: screen;
+}
